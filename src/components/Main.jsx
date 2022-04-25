@@ -5,7 +5,8 @@ import RepositoryList from './RepositoryList'
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    flexShrink: 1
+    flexShrink: 1,
+    backgroundColor: '#e2e4e6'
   }
 })
 
@@ -13,7 +14,6 @@ const Main = () => {
   return (
     <View style={styles.container}>
       <AppBar />
-      <Text>Rate Repository Application</Text>
       <RepositoryList />
     </View>
   )

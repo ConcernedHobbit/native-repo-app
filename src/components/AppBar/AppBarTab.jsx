@@ -1,19 +1,15 @@
-import { Text, View, StyleSheet } from 'react-native';
-import theme from '../../theme'
+import { View, StyleSheet } from 'react-native';
+import Text from '../Text'
 
 const styles = StyleSheet.create({
   tab: {
     margin: 20
   },
-  text: {
-    color: theme.colors.textPrimary,
-    fontSize: 20
-  }
 })
 
 const AppBarTab = ({ text }) => (
   <View style={styles.tab}>
-    <Text style={styles.text}>
+    <Text color='secondary' fontSize='heading'>
       {text}
     </Text>
   </View>

@@ -1,4 +1,5 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, StyleSheet } from 'react-native'
+import Text from '../Text'
 
 const styles = StyleSheet.create({
   container: {
@@ -28,7 +29,7 @@ const Stat = ({ number, text }) => {
 
   return (
     <View style={styles.stat}>
-      <Text style={styles.bold}>{number}</Text>
+      <Text fontWeight='bold'>{number}</Text>
       <Text>{text}</Text>
     </View>
   )

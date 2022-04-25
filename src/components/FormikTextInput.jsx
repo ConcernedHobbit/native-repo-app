@@ -1,5 +1,6 @@
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import { useField } from 'formik'
+import Text from './Text'
 import TextInput from './TextInput'
 import theme from '../theme'
 

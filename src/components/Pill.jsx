@@ -1,4 +1,5 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, StyleSheet } from 'react-native'
+import Text from './Text'
 import theme from '../theme'
 
 const styles = StyleSheet.create({
@@ -9,15 +10,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 5,
     paddingVertical: 7,
     borderRadius: 5
-  },
-  pillText: {
-    color: '#fff'
-  },
+  }
 })
 
 const Pill = ({ text }) => (
   <View style={styles.pill}>
-    <Text style={styles.pillText}>{text}</Text>
+    <Text color='secondary'>{text}</Text>
   </View>
 )
 

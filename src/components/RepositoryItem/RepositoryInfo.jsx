@@ -1,4 +1,5 @@
-import { View, Image, Text, StyleSheet } from 'react-native'
+import { View, Image, StyleSheet } from 'react-native'
+import Text from '../Text'
 import Pill from '../Pill'
 
 const styles = StyleSheet.create({
@@ -13,16 +14,12 @@ const styles = StyleSheet.create({
     marginRight: 10
   },
   information: {
-    flexShrink: 1
+    flexShrink: 1,
+    marginVertical: 5
   },
   text: {
     flexShrink: 1,
     flexWrap: 'wrap',
-    fontSize: 16
-  },
-  name: {
-    fontWeight: 'bold',
-    marginBottom: 5
   }
 })
 
@@ -33,8 +30,8 @@ const RepositoryInfo = ({ avatarUrl, name, description, language }) => (
       source={{ uri: avatarUrl }}
     />
     <View style={styles.information}>
-      <Text style={[styles.text, styles.name]}>{name}</Text>
-      <Text style={styles.text}>{description}</Text>
+      <Text style={[styles.text, styles.name]} fontSize='subheading' fontWeight='bold'>{name}</Text>
+      <Text style={styles.text} fontSize='subheading'>{description}</Text>
       <Pill text={language} />
     </View>
   </View>

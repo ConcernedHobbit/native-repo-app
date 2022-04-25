@@ -1,5 +1,6 @@
 import { Formik } from 'formik'
-import { View, Pressable, Text, StyleSheet } from 'react-native'
+import { View, Pressable, StyleSheet } from 'react-native'
+import Text from './Text'
 import theme from '../theme'
 import FormikTextInput from './FormikTextInput'
 import * as yup from 'yup'
@@ -15,8 +16,6 @@ const styles = StyleSheet.create({
     borderRadius: 5
   },
   text: {
-    color: '#fff',
-    fontWeight: 'bold',
     textAlign: 'center'
   }
 })
@@ -31,7 +30,7 @@ const SignInForm = ({ handleSubmit }) => (
     <FormikTextInput name='username' placeholder='Username' />
     <FormikTextInput name='password' placeholder='Password' secureTextEntry />
     <Pressable style={styles.button} onPress={handleSubmit}>
-      <Text style={styles.text}>Sign in</Text>
+      <Text color='secondary' fontWeight='bold'>Sign in</Text>
     </Pressable>
   </View>
 )

@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet } from 'react-native';
+import { ScrollView, View, StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
 import theme from '../../theme';
 import AppBarTab from './AppBarTab';
@@ -19,13 +19,15 @@ const styles = StyleSheet.create({
 
 const AppBar = () => (
   <View style={styles.container}>
-    <Link to="/">
-      <AppBarTab text='Repositories' />
-    </Link>
+    <ScrollView horizontal>
+      <Link to="/">
+        <AppBarTab text='Repositories' />
+      </Link>
 
-    <Link to="/sign-in">
-      <AppBarTab text='Sign in'/>
-    </Link>
+      <Link to="/sign-in">
+        <AppBarTab text='Sign in'/>
+      </Link>
+    </ScrollView>
   </View>
 );
 

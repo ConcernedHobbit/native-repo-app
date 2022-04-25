@@ -1,10 +1,15 @@
-import { StyleSheet, Text } from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 import { useField } from 'formik'
 import TextInput from './TextInput'
+import theme from '../theme'
 
 const styles = StyleSheet.create({
+  container: {
+    margin: 5,
+  },
   errorText: {
     marginTop: 5,
+    color: theme.colors.error
   },
 })
 
@@ -13,7 +18,7 @@ const FormikTextInput = ({ name, ...props }) => {
   const showError = meta.touched && meta.error
 
   return (
-    <>
+    <View style={styles.container}>
       <TextInput
         onChangeText={value => helpers.setValue(value)}
         onBlur={() => helpers.setTouched(true)}
@@ -22,7 +27,7 @@ const FormikTextInput = ({ name, ...props }) => {
         {...props}
       />
       {showError && <Text style={styles.errorText}>{meta.error}</Text>}
-    </>
+    </View>
   )
 }
 
